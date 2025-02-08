@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { insertMessageSchema } from "@shared/schema";
+import { insertMessageSchema, type InsertMessage } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,7 +14,7 @@ import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 
 export default function Contact() {
   const { toast } = useToast();
-  const form = useForm({
+  const form = useForm<InsertMessage>({
     resolver: zodResolver(insertMessageSchema),
     defaultValues: {
       name: "",
@@ -24,7 +24,7 @@ export default function Contact() {
   });
 
   const mutation = useMutation({
-    mutationFn: async (data) => {
+    mutationFn: async (data: InsertMessage) => {
       const res = await apiRequest("POST", "/api/contact", data);
       return res.json();
     },
@@ -35,10 +35,10 @@ export default function Contact() {
       });
       form.reset();
     },
-    onError: () => {
+    onError: (error) => {
       toast({
         title: "Error",
-        description: "Something went wrong. Please try again.",
+        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
         variant: "destructive"
       });
     }
@@ -115,7 +115,7 @@ export default function Contact() {
             </div>
 
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(data => mutation.mutate(data))} className="space-y-6">
+              <form onSubmit={form.handleSubmit((data) => mutation.mutate(data))} className="space-y-6">
                 <FormField
                   control={form.control}
                   name="name"

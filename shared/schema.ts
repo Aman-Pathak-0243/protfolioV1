@@ -10,10 +10,17 @@ export const messages = pgTable("messages", {
   createdAt: timestamp("created_at").defaultNow()
 });
 
-export const insertMessageSchema = createInsertSchema(messages).omit({
-  id: true,
-  createdAt: true
-});
+// Enhanced validation for the contact form
+export const insertMessageSchema = createInsertSchema(messages)
+  .omit({
+    id: true,
+    createdAt: true
+  })
+  .extend({
+    email: z.string().email("Please enter a valid email address"),
+    name: z.string().min(2, "Name must be at least 2 characters"),
+    message: z.string().min(10, "Message must be at least 10 characters")
+  });
 
 export type InsertMessage = z.infer<typeof insertMessageSchema>;
 export type Message = typeof messages.$inferSelect;

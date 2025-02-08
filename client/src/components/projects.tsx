@@ -5,26 +5,26 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management",
+    title: "E-commerce Website (Meshopify)",
+    description: "A fully functional e-Commerce platform using MERN stack with payment integration via Braintree, JWT authentication, and an intuitive admin panel.",
     image: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8",
-    tags: ["React", "Node.js", "MongoDB"],
+    tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "Braintree"],
     demo: "#",
     github: "#"
   },
   {
-    title: "Task Management App",
-    description: "Collaborative task management with real-time updates",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
-    tags: ["TypeScript", "Redux", "Socket.io"],
-    demo: "#",
-    github: "#"
-  },
-  {
-    title: "AI Chat Interface",
-    description: "Modern chat interface with AI-powered responses",
+    title: "Chat Application (Meshage)",
+    description: "Real-time chat application with user authentication, direct messaging, and real-time notifications using Socket.IO.",
     image: "https://images.unsplash.com/photo-1510759395231-72b17d622279",
-    tags: ["Next.js", "TailwindCSS", "OpenAI"],
+    tags: ["Node.js", "Express.js", "Socket.IO", "JWT"],
+    demo: "#",
+    github: "#"
+  },
+  {
+    title: "MESH Club Website",
+    description: "Led the development of the official MESH Club website at IIT Jammu, implementing responsive design and modern features.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+    tags: ["React.js", "CSS", "JavaScript", "Responsive Design"],
     demo: "#",
     github: "#"
   }

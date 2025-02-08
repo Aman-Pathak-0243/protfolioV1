@@ -22,10 +22,10 @@ export default function About() {
           <Card>
             <CardContent className="p-6">
               <p className="text-lg mb-4">
-                Hello! I'm a passionate full-stack developer with a keen eye for design and a love for creating seamless user experiences. With expertise in modern web technologies, I bring ideas to life through clean, efficient code and intuitive interfaces.
+                A passionate and highly motivated second-year B.Tech student at IIT Jammu with a strong foundation in Full-Stack Web Development and Data Structures & Algorithms. Currently maintaining a CGPA of 8.76.
               </p>
               <p className="text-lg">
-                When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or sharing my knowledge through technical writing.
+                I am determined to leverage my technical expertise and innovative thinking to build transformative projects that propel business growth and drive cutting-edge technological advancements. As a Web Developer for KRITASH and MESH Clubs at IIT Jammu, I've led the development of multiple successful web projects.
               </p>
             </CardContent>
           </Card>

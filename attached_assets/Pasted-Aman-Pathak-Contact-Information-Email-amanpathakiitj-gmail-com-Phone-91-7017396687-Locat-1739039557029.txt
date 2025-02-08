@@ -1,0 +1,116 @@
+Aman Pathak
+ Contact Information:
+ Email: amanpathakiitj@gmail.com
+ Phone: +91 7017396687
+ Location: Nagrota, Jammu
+ LinkedIn: @Aman-Pathak-0243
+ GitHub: /amanpathak015
+ Alternate email: amanpathak8924@gmail.com
+ Career Objective
+ A passionate and highly motivated second-year B.Tech student with a strong foundation in Full-Stack
+ Web Development and Data Structures & Algorithms. I am excited to contribute my skills to solving
+ complex problems, developing innovative solutions, and collaborating in dynamic team environments. I
+ am determined to leverage my technical expertise and innovative thinking to build transformative
+ projects that propel business growth and drive cutting-edge technological advancements.
+ Work Experience
+ Web Developer — KRITASH Club IIT JAMMU
+ IIT Jammu, Jammu, India
+ Aug. 2024- Present
+ • Spearheaded the design and development of the official websites for the Kritash and MESH Clubs
+ at IIT Jammu, delivering responsive and user-centric web solutions.
+ • Implemented seamless navigation and modern design principles, optimizing the user experience
+ across devices and platforms.
+ • Utilized HTML, CSS, JavaScript, and React to create dynamic, interactive interfaces, improving
+ engagement and user satisfaction.
+ • Regularly updates, ensuring content accuracy and timely integration of new features aligned with
+ club activities and objectives.
+ • Coordinated with club members and stakeholders to incorporate feedback and ensure that the
+ websites meet the club’s evolving needs.
+ Web Developer — MESH Club IIT JAMMU
+ IIT Jammu, Jammu, India
+ Aug. 2024- Present
+ • Led the development of the MESH Club’s official website, ensuring a visually appealing, mobile
+f
+ irst, and accessible design.
+ • Integrated React.js for interactive elements and dynamic content, enhancing user interaction and
+ real-time updates.
+ • Worked closely with club members to ensure the website was aligned with organizational goals and
+ reflected the latest events and news.
+ • Implemented best practices in code optimization, ensuring faster load times and improved perfor
+mance.
+ • Project Link: Official website of the MESH Club
+ 1
+Projects
+ E-commerce Website
+ Jan 2025
+ • Developed a fully functional e-Commerce platform using the MERN stack (MongoDB, Express.js,
+ React.js, Node.js), focused on scalability and security.
+ • Integrated payment gateways (Braintree) and built secure authentication mechanisms using JWT
+ and bcrypt.
+ • Designed an intuitive admin panel for product, user, and order management.
+ • Utilized React.js to deliver a dynamic, user-friendly frontend and Axios for optimized API requests,
+ ensuring seamless functionality.
+ • Implemented real-time features and ensured robust performance under load, further enhancing the
+ user experience.
+ • Focused on secure and efficient code to handle transactions and sensitive data with the utmost
+ security.
+ • Project Link: Meshopify: The E-Commerce Website
+ Chat Application
+ Dec 2024
+ • Developed a real-time chat application using Node.js, Express.js, and Socket.IO for real-time com
+munication.
+ • Implemented user authentication using JWT and user-to-user chat functionality.
+ • Designed an intuitive and responsive user interface using HTML, CSS, and JavaScript.
+ • Integrated real-time notifications and message delivery status updates.
+ • Deployed the application on a cloud platform for real-time global access.
+ • Project Link: Meshage: The Real Time Chat Application
+ Certifications & Trainings
+ Sigma Batch for DSA and Web Development
+ Apna College, Virtual
+ May 2024- December 2024
+ • Gained in-depth knowledge in Data Structures & Algorithms (DSA) and MERN stack development,
+ with a focus on solving real-world problems and optimizing solutions.
+ • Worked with advanced algorithms, data structures, and technologies like MongoDB, Express.js,
+ React.js, and Node.js to build scalable applications.
+ • Completed hands-on projects and challenges that enhanced my coding efficiency and full-stack
+ development skills.
+ • Participated in live coding challenges and collaborative projects that helped me gain practical
+ experience in full-stack web development.
+ Tools & Technologies: JavaScript, ReactJS, Node.js, Express.js, MongoDB, MEAN/MERN Stack,
+ REST API, Git, GitHub, HTML, CSS, Python, C++ Programming, JWT, Bcrypt, Axios, NPM, MAT
+LAB
+ Problem Solving: Data Structures & Algorithms (LeetCode, Codeforces), Algorithm Optimization
+ Leadership & Extracurricular Activities
+ 2
+• Co-Convenor, Entrepreneurship Fest at IIT Jammu: Spearheaded the coordination and manage
+ment of key aspects of the festival, driving innovation and fostering an entrepreneurial spirit among
+ participants.
+ • Coordinator, MESH Club at IIT Jammu: Led a dynamic team of developers, organized impactful
+ events, and played a pivotal role in the growth and success of the club.
+ • Web Development Head, Kritash & MESH Clubs: Directed the development and ongoing
+ maintenance of the clubs’ websites, ensuring seamless functionality, optimal performance, and a
+ user-friendly experience.
+ • Class Representative & Branch Convenor: Acted as a liaison between students and fac
+ulty, providing guidance and support to over 30 students, ensuring effective communication, and
+ facilitating smooth academic operations.
+ Achievements
+ • Inter IIT Tech Meet 13.0: Secured the 10th rank in the statement of the problem ’Centralized
+ Intelligence for Dynamic Swarm Navigation’ at IIT Bombay, organized by Kalyani, Bharatforge.
+ • Academic Excellence: Consistently ranked among the top performers in my batch, maintaining
+ a CGPA of 8.7.
+ • Hackathon: Participated in several hackathons, winning accolades for innovative solutions and
+ efficient problem-solving.
+ Education
+ B.Tech in Mechanical Engineering
+ Indian Institute of Technology Jammu
+ XII (UP Board)
+ S.S.N.T.V.P. Inter College, Kusmara, Mainpuri
+ X (UP Board)
+ S.S.N.T.V.P. Inter College, Kusmara, Mainpuri
+ 2023- 2027
+ CGPA: 8.76
+ 2022
+ 82.4%
+ 2020
+ 84.67%
+ 3

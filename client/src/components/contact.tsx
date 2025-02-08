@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { apiRequest } from "@/lib/queryClient";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -50,63 +51,124 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-lg mx-auto"
+          className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(data => mutation.mutate(data))} className="space-y-6">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your name" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input type="email" placeholder="your@email.com" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Message</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Your message"
-                        className="min-h-[150px]"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button
-                type="submit"
-                className="w-full"
-                disabled={mutation.isPending}
-              >
-                {mutation.isPending ? "Sending..." : "Send Message"}
-              </Button>
-            </form>
-          </Form>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <Mail className="h-5 w-5" />
+                  <div>
+                    <h3 className="font-medium">Email</h3>
+                    <a href="mailto:amanpathakiitj@gmail.com" className="text-muted-foreground hover:text-primary">
+                      amanpathakiitj@gmail.com
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Phone className="h-5 w-5" />
+                  <div>
+                    <h3 className="font-medium">Phone</h3>
+                    <a href="tel:+917017396687" className="text-muted-foreground hover:text-primary">
+                      +91 7017396687
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <MapPin className="h-5 w-5" />
+                  <div>
+                    <h3 className="font-medium">Location</h3>
+                    <p className="text-muted-foreground">Nagrota, Jammu</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Linkedin className="h-5 w-5" />
+                  <div>
+                    <h3 className="font-medium">LinkedIn</h3>
+                    <a 
+                      href="https://linkedin.com/in/Aman-Pathak-0243" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary"
+                    >
+                      @Aman-Pathak-0243
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Github className="h-5 w-5" />
+                  <div>
+                    <h3 className="font-medium">GitHub</h3>
+                    <a 
+                      href="https://github.com/amanpathak015" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary"
+                    >
+                      /amanpathak015
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(data => mutation.mutate(data))} className="space-y-6">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="your@email.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Your message"
+                          className="min-h-[150px]"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  type="submit"
+                  className="w-full"
+                  disabled={mutation.isPending}
+                >
+                  {mutation.isPending ? "Sending..." : "Send Message"}
+                </Button>
+              </form>
+            </Form>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const phrases = [
   "Full Stack Developer",
-  "UI/UX Enthusiast",
+  "Web Developer",
   "Problem Solver"
 ];
 
@@ -41,7 +41,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-bold mb-4"
         >
-          John Doe
+          Aman Pathak
         </motion.h1>
         <motion.div
           initial={{ opacity: 0 }}

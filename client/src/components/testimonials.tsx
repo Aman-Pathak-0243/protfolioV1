@@ -6,21 +6,21 @@ import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
-    text: "John is an exceptional developer who consistently delivers high-quality work. His attention to detail and problem-solving skills are outstanding.",
-    author: "Sarah Johnson",
-    role: "Tech Lead",
+    text: "Aman demonstrated exceptional leadership as Web Development Head, successfully leading the development of both KRITASH and MESH club websites. His technical expertise and ability to manage teams effectively sets him apart.",
+    author: "Club Mentor",
+    role: "KRITASH & MESH Clubs",
     avatar: "https://images.unsplash.com/photo-1708860028064-3303a016e88f"
   },
   {
-    text: "Working with John was a pleasure. He brings creative solutions to complex problems and is always willing to go the extra mile.",
-    author: "Mike Chen",
-    role: "Product Manager",
+    text: "His innovative approach to the 'Centralized Intelligence for Dynamic Swarm Navigation' problem at Inter IIT Tech Meet showcased both his technical prowess and problem-solving abilities. Securing 10th rank is a testament to his skills.",
+    author: "Team Lead",
+    role: "Inter IIT Tech Meet 13.0",
     avatar: "https://images.unsplash.com/photo-1708860028233-10da73ede2a0"
   },
   {
-    text: "John's expertise in full-stack development helped us launch our product ahead of schedule. His commitment to quality is remarkable.",
-    author: "Emily Brown",
-    role: "CEO",
+    text: "As Class Representative and Branch Convenor, Aman effectively bridged communication between faculty and students, managing a group of over 30 students with remarkable organizational skills and dedication.",
+    author: "Faculty Advisor",
+    role: "IIT Jammu",
     avatar: "https://images.unsplash.com/photo-1711980012199-2697edfc8794"
   }
 ];

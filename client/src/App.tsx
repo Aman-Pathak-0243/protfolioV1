@@ -6,6 +6,8 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Messages from "@/pages/messages";
 import CustomCursor from "@/components/custom-cursor";
+import LanguageSwitcher from "@/components/language-switcher";
+import "./i18n/config";
 
 function Router() {
   return (
@@ -21,6 +23,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <CustomCursor />
+      <LanguageSwitcher />
       <Router />
       <Toaster />
     </QueryClientProvider>

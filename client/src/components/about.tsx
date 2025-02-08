@@ -13,7 +13,7 @@ export default function About() {
         <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.img
-            src="https://images.unsplash.com/photo-1573496799515-eebbb63814f2"
+            src="..\public\images\profile.jpg"
             alt="Profile"
             className="rounded-lg shadow-lg"
             whileHover={{ scale: 1.05 }}

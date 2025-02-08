@@ -1,16 +1,14 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
-const phrases = [
-  "Full Stack Developer",
-  "Web Developer",
-  "Problem Solver"
-];
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [letterIndex, setLetterIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+
+  const phrases = t('hero.roles', { returnObjects: true }) as string[];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,7 +29,7 @@ export default function Hero() {
     }, isDeleting ? 50 : 100);
 
     return () => clearTimeout(timer);
-  }, [phraseIndex, letterIndex, isDeleting]);
+  }, [phraseIndex, letterIndex, isDeleting, phrases]);
 
   return (
     <section className="min-h-screen flex items-center justify-center relative">
@@ -41,7 +39,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-bold mb-4"
         >
-          Aman Pathak
+          {t('hero.title')}
         </motion.h1>
         <motion.div
           initial={{ opacity: 0 }}
@@ -59,7 +57,7 @@ export default function Hero() {
           transition={{ delay: 1 }}
           className="inline-block mt-8 px-6 py-3 bg-primary text-primary-foreground rounded-full hover:scale-105 transition-transform"
         >
-          Get in Touch
+          {t('hero.cta')}
         </motion.a>
       </div>
     </section>

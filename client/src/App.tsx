@@ -4,12 +4,14 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import Messages from "@/pages/messages";
 import CustomCursor from "@/components/custom-cursor";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/messages" component={Messages} />
       <Route component={NotFound} />
     </Switch>
   );

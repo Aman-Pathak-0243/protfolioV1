@@ -125,7 +125,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>{t('contact.name')}</FormLabel>
                       <FormControl>
-                        <Input placeholder={t('contact.namePlaceholder')} {...field} />
+                        <Input placeholder={t('John Doe')} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -138,7 +138,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>{t('contact.email')}</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder={t('contact.emailPlaceholder')} {...field} />
+                        <Input type="email" placeholder={t('abc.gmail.com')} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -152,7 +152,7 @@ export default function Contact() {
                       <FormLabel>{t('contact.message')}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder={t('contact.messagePlaceholder')}
+                          placeholder={t('write a message')}
                           className="min-h-[150px]"
                           {...field}
                         />

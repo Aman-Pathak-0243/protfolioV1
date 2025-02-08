@@ -1,11 +1,15 @@
-import { MailService } from '@sendgrid/mail';
+import nodemailer from 'nodemailer';
 
-if (!process.env.SENDGRID_API_KEY) {
-  throw new Error("SENDGRID_API_KEY environment variable must be set");
-}
-
-const mailService = new MailService();
-mailService.setApiKey(process.env.SENDGRID_API_KEY);
+// Create reusable transporter object using SMTP transport
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // true for 465, false for other ports
+  auth: {
+    user: 'test9mt@gmail.com',
+    pass: 'test11++'
+  }
+});
 
 interface EmailContent {
   name: string;
@@ -22,16 +26,16 @@ export async function sendContactNotification(content: EmailContent): Promise<bo
   `;
 
   try {
-    await mailService.send({
-      to: "amanpathakiitj@gmail.com", // Your email address
-      from: "amanpathakiitj@gmail.com", // Must be verified in SendGrid
+    await transporter.sendMail({
+      from: '"Portfolio Contact Form" <test9mt@gmail.com>',
+      to: 'test9mt@gmail.com',
       subject: `New Contact Form Message from ${content.name}`,
       text: `New message from ${content.name} (${content.email}): ${content.message}`,
       html: htmlContent,
     });
     return true;
   } catch (error) {
-    console.error('SendGrid email error:', error);
+    console.error('Email sending error:', error);
     return false;
   }
 }

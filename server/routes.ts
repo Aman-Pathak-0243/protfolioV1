@@ -8,9 +8,21 @@ export function registerRoutes(app: Express): Server {
     try {
       const message = insertMessageSchema.parse(req.body);
       const result = await storage.createMessage(message);
+      console.log(`New message received from ${result.name} (${result.email})`);
       res.json(result);
     } catch (error) {
+      console.error("Error processing contact message:", error);
       res.status(400).json({ error: "Invalid message data" });
+    }
+  });
+
+  app.get("/api/messages", async (_req, res) => {
+    try {
+      const messages = await storage.getMessages();
+      res.json(messages);
+    } catch (error) {
+      console.error("Error fetching messages:", error);
+      res.status(500).json({ error: "Failed to fetch messages" });
     }
   });
 

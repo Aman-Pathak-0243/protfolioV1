@@ -10,24 +10,24 @@ const projects = [
     description: "A fully functional e-Commerce platform using MERN stack with payment integration via Braintree, JWT authentication, and an intuitive admin panel.",
     image: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8",
     tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "Braintree"],
-    demo: "#",
-    github: "#"
+    demo: "https://meshopify.onrender.com/",
+    github: "https://github.com/Aman-Pathak-0243/Meshopify"
   },
   {
     title: "Chat Application (Meshage)",
     description: "Real-time chat application with user authentication, direct messaging, and real-time notifications using Socket.IO.",
     image: "https://images.unsplash.com/photo-1510759395231-72b17d622279",
     tags: ["Node.js", "Express.js", "Socket.IO", "JWT"],
-    demo: "#",
-    github: "#"
+    demo: "https://meshage-the-real-time-chat-application.onrender.com/",
+    github: "https://github.com/Aman-Pathak-0243/MESHAGE-The-Real-Time-Chat-Application"
   },
   {
     title: "MESH Club Website",
     description: "Led the development of the official MESH Club website at IIT Jammu, implementing responsive design and modern features.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
     tags: ["React.js", "CSS", "JavaScript", "Responsive Design"],
-    demo: "#",
-    github: "#"
+    demo: "https://mesh-club-iitj.onrender.com/",
+    github: "https://github.com/Aman-Pathak-0243/MESH_CLUB_IITJ"
   }
 ];
 

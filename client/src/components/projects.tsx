@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const projects = [
   {
@@ -31,10 +32,11 @@ const projects = [
 ];
 
 export default function Projects() {
+  const { t } = useTranslation();
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">{t('projects.title')}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
@@ -72,7 +74,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <ExternalLink size={16} /> Demo
+                      <ExternalLink size={16} /> {t('projects.viewDemo')}
                     </a>
                     <a
                       href={project.github}
@@ -80,7 +82,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Github size={16} /> Code
+                      <Github size={16} /> {t('projects.viewCode')}
                     </a>
                   </div>
                 </CardContent>

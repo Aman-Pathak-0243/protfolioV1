@@ -11,6 +11,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { apiRequest } from "@/lib/queryClient";
 import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+import { t } from 'i18next'; // Assuming 'i18next' is used for translations
+
 
 export default function Contact() {
   const { toast } = useToast();
@@ -30,15 +32,15 @@ export default function Contact() {
     },
     onSuccess: () => {
       toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
+        title: t('contact.success'),
+        description: t('contact.successMessage'),
       });
       form.reset();
     },
     onError: (error) => {
       toast({
-        title: "Error",
-        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
+        title: t('contact.error'),
+        description: error instanceof Error ? error.message : t('contact.errorMessage'),
         variant: "destructive"
       });
     }
@@ -53,7 +55,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{t('contact.title')}</h2>
 
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -61,7 +63,7 @@ export default function Contact() {
                 <div className="flex items-center gap-4">
                   <Mail className="h-5 w-5" />
                   <div>
-                    <h3 className="font-medium">Email</h3>
+                    <h3 className="font-medium">{t('contact.emailTitle')}</h3>
                     <a href="mailto:amanpathakiitj@gmail.com" className="text-muted-foreground hover:text-primary">
                       amanpathakiitj@gmail.com
                     </a>
@@ -70,7 +72,7 @@ export default function Contact() {
                 <div className="flex items-center gap-4">
                   <Phone className="h-5 w-5" />
                   <div>
-                    <h3 className="font-medium">Phone</h3>
+                    <h3 className="font-medium">{t('contact.phoneTitle')}</h3>
                     <a href="tel:+917017396687" className="text-muted-foreground hover:text-primary">
                       +91 7017396687
                     </a>
@@ -79,16 +81,16 @@ export default function Contact() {
                 <div className="flex items-center gap-4">
                   <MapPin className="h-5 w-5" />
                   <div>
-                    <h3 className="font-medium">Location</h3>
+                    <h3 className="font-medium">{t('contact.locationTitle')}</h3>
                     <p className="text-muted-foreground">Nagrota, Jammu</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <Linkedin className="h-5 w-5" />
                   <div>
-                    <h3 className="font-medium">LinkedIn</h3>
-                    <a 
-                      href="https://linkedin.com/in/Aman-Pathak-0243" 
+                    <h3 className="font-medium">{t('contact.linkedInTitle')}</h3>
+                    <a
+                      href="https://linkedin.com/in/Aman-Pathak-0243"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary"
@@ -100,9 +102,9 @@ export default function Contact() {
                 <div className="flex items-center gap-4">
                   <Github className="h-5 w-5" />
                   <div>
-                    <h3 className="font-medium">GitHub</h3>
-                    <a 
-                      href="https://github.com/amanpathak015" 
+                    <h3 className="font-medium">{t('contact.gitHubTitle')}</h3>
+                    <a
+                      href="https://github.com/amanpathak015"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary"
@@ -121,9 +123,9 @@ export default function Contact() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel>{t('contact.name')}</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your name" {...field} />
+                        <Input placeholder={t('contact.namePlaceholder')} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -134,9 +136,9 @@ export default function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>{t('contact.email')}</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="your@email.com" {...field} />
+                        <Input type="email" placeholder={t('contact.emailPlaceholder')} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -147,10 +149,10 @@ export default function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>{t('contact.message')}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Your message"
+                          placeholder={t('contact.messagePlaceholder')}
                           className="min-h-[150px]"
                           {...field}
                         />
@@ -164,7 +166,7 @@ export default function Contact() {
                   className="w-full"
                   disabled={mutation.isPending}
                 >
-                  {mutation.isPending ? "Sending..." : "Send Message"}
+                  {mutation.isPending ? t('contact.sending') : t('contact.send')}
                 </Button>
               </form>
             </Form>

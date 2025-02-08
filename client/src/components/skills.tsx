@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 const skillCategories = [
   {
-    name: "Frontend Development",
+    name: "frontend",
     skills: [
       { name: "ReactJS", level: 90 },
       { name: "HTML/CSS", level: 90 },
@@ -13,7 +14,7 @@ const skillCategories = [
     ]
   },
   {
-    name: "Backend Development",
+    name: "backend",
     skills: [
       { name: "Node.js", level: 85 },
       { name: "Express.js", level: 85 },
@@ -22,7 +23,7 @@ const skillCategories = [
     ]
   },
   {
-    name: "Databases & Stack",
+    name: "databases",
     skills: [
       { name: "MongoDB", level: 85 },
       { name: "SQL", level: 80 },
@@ -31,7 +32,7 @@ const skillCategories = [
     ]
   },
   {
-    name: "Programming Languages",
+    name: "languages",
     skills: [
       { name: "Python", level: 85 },
       { name: "Java", level: 80 },
@@ -40,7 +41,7 @@ const skillCategories = [
     ]
   },
   {
-    name: "Tools & Technologies",
+    name: "tools",
     skills: [
       { name: "Git/GitHub", level: 85 },
       { name: "NPM", level: 85 },
@@ -51,10 +52,12 @@ const skillCategories = [
 ];
 
 export default function Skills() {
+  const { t } = useTranslation();
+
   return (
     <section id="skills" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">{t('skills.title')}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
@@ -66,7 +69,9 @@ export default function Skills() {
             >
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">{category.name}</h3>
+                  <h3 className="text-xl font-semibold mb-4">
+                    {t(`skills.categories.${category.name}`)}
+                  </h3>
                   <div className="space-y-4">
                     {category.skills.map((skill, skillIndex) => (
                       <motion.div

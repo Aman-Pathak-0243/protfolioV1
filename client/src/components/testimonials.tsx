@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const testimonials = [
   {
@@ -27,6 +28,7 @@ const testimonials = [
 
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
+  const { t } = useTranslation();
 
   const next = () => setCurrent((current + 1) % testimonials.length);
   const prev = () => setCurrent((current - 1 + testimonials.length) % testimonials.length);
@@ -34,7 +36,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Testimonials</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">{t('testimonials.title')}</h2>
         <div className="relative max-w-3xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
@@ -46,7 +48,7 @@ export default function Testimonials() {
             >
               <Card className="bg-card">
                 <CardContent className="p-6">
-                  <p className="text-lg mb-6 italic">"{testimonials[current].text}"</p>
+                  <p className="text-lg mb-6 italic">"{t(`testimonials.items.${current}.text`, { defaultValue: testimonials[current].text })}"</p>
                   <div className="flex items-center gap-4">
                     <img
                       src={testimonials[current].avatar}
@@ -54,8 +56,8 @@ export default function Testimonials() {
                       className="w-12 h-12 rounded-full object-cover"
                     />
                     <div>
-                      <p className="font-medium">{testimonials[current].author}</p>
-                      <p className="text-sm text-muted-foreground">{testimonials[current].role}</p>
+                      <p className="font-medium">{t(`testimonials.items.${current}.author`, { defaultValue: testimonials[current].author })}</p>
+                      <p className="text-sm text-muted-foreground">{t(`testimonials.items.${current}.role`, { defaultValue: testimonials[current].role })}</p>
                     </div>
                   </div>
                 </CardContent>
